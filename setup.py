@@ -18,7 +18,7 @@ from wger import get_version
 
 
 with open('README.md') as readme:
-    long_description = readme.read()
+    long_description = readme.read()  
 
 with open('requirements.txt') as requirements_production:
     install_requires = requirements_production.readlines()
@@ -26,8 +26,8 @@ with open('requirements.txt') as requirements_production:
 setup(
     name='wger',
     description='FLOSS workout, fitness and weight manager/tracker written with Django',
-    long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description = long_description,
+    long_description_content_type = 'text/markdown',
     version=get_version(),
     url='https://github.com/wger-project',
     author='Roland Geider',
@@ -49,7 +49,7 @@ setup(
         'Programming Language :: Python :: 3.10',
     ],
 
-    install_requires=install_requires,
+    install_requires = install_requires,
     entry_points={
         'console_scripts': [
             'wger = wger.__main__:main',
